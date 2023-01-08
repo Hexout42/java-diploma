@@ -82,6 +82,7 @@ StringBuilder builder =new StringBuilder();
         builder.delete(0,builder.length());
     }}
         for (int i=0;i<keyWords.size();i++){
+            if (keyWords.get(i) != null && titles.get(i) != null && url.get(i) != null)
             suggests.add(new Suggest(keyWords.get(i),titles.get(i), url.get(i) ));
         }
 
