@@ -40,7 +40,7 @@ public class Main {
 
         main.pdfInput();
         main.pdfReader();
-
+       main.reader.close();
 
        }
 
@@ -56,6 +56,7 @@ public class Main {
             outPdf.createNewFile();
             var doc = new PdfDocument(new PdfReader(fileIn), new PdfWriter(outPdf));
             allobject.add(doc);
+
         }
 
 
