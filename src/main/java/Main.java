@@ -19,7 +19,7 @@ import java.util.Scanner;
 
 public class Main {
     File file = new File("data/config");
-  Scanner reader  =new Scanner(file);
+
   List<File> pdfs = new ArrayList<>();
   List<Suggest> suggestList = new ArrayList<>();
   ArrayList<PdfDocument> allobject = new ArrayList<>();
@@ -30,7 +30,7 @@ public class Main {
 
     public Main() throws IOException {
     }
-    LinksSuggester linksSuggester = new LinksSuggester(file,reader);
+    LinksSuggester linksSuggester = new LinksSuggester(file);
 
 
     public static void main(String[] args) throws Exception {
@@ -39,8 +39,9 @@ public class Main {
 
 
         main.pdfInput();
+        System.out.println(main.linksSuggester.getAllsuggest());
         main.pdfReader();
-       main.reader.close();
+
 
        }
 
